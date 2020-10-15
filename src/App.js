@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 const list = ['Cooking 🥧🥘🍲 ', 'Shopping 🛒', 'Writing Codes 👩🏼‍💻👨🏼‍💻⌨'];
 const App = (props) => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(3);
   const [text, setText] = useState('');
   const [, delItem] = useState();
   // const [, addItem] = useState();
