@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-const list = [];
+const list = ['Cooking 🥧🥘🍲 ', 'Shopping 🛒', 'Writing Codes 👩🏼‍💻👨🏼‍💻⌨'];
 const App = (props) => {
   const [counter, setCounter] = useState(0);
   const [text, setText] = useState('');
