@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 const list = ['Cooking 🥧🥘🍲 ', 'Shopping 🛒', 'Writing Codes 👩🏼‍💻👨🏼‍💻⌨'];
 const App = (props) => {
-  const [counter, setCounter] = useState(3);
+  const [counter, setCounter] = useState(list.length);
   const [text, setText] = useState('');
   const [, delItem] = useState();
   // const [, addItem] = useState();
@@ -24,7 +24,7 @@ const App = (props) => {
   return (
     <SafeAreaView style={style.container}>
       <View style={style.todoView}>
-        <Text style={style.todo}>TODO</Text>
+        <Text style={style.todo}> 📌 TODO 📋</Text>
         <Text style={style.todoCounter}>{counter}</Text>
       </View>
       <ScrollView>
@@ -81,20 +81,22 @@ const App = (props) => {
 export default App;
 const style = StyleSheet.create({
   container: {
-    backgroundColor: '#37474f',
+    backgroundColor: '#bdbdbd',
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
+    // fontFamily: 'lucida grande'
   },
   todoView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin: 5,
+    margin: 10,
+    padding: 5,
     alignItems: 'center',
   },
-  todo: {fontSize: 40, fontWeight: 'bold', color: '#ffa726'},
-  todoCounter: {fontSize: 25, fontWeight: 'bold', color: '#ffa726'},
+  todo: {fontSize: 40, fontWeight: 'bold', color: '#f4511e'},
+  todoCounter: {fontSize: 25, fontWeight: 'bold', color: '#f4511e'},
   todoContainer: {
-    backgroundColor: '#546e7a',
+    backgroundColor: '#ffab91',
     margin: 10,
     borderRadius: 10,
     // flex: 1,
@@ -103,7 +105,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   todoText: {
-    color: 'white',
+    color: '#373737',
     fontSize: 20,
     paddingLeft: 15,
     paddingVertical: 10,
@@ -112,7 +114,7 @@ const style = StyleSheet.create({
     position: 'absolute',
     right: 2,
     top: -9,
-    backgroundColor: '#eceff1',
+    backgroundColor: '#616161',
     borderRadius: 20,
     height: Dimensions.get('window').height * 0.03,
     width: Dimensions.get('window').width * 0.05,
@@ -122,10 +124,10 @@ const style = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
   },
   addContainer: {
-    backgroundColor: '#b0bec5',
+    backgroundColor: '#757575',
     alignItems: 'stretch',
     justifyContent: 'center',
     marginHorizontal: 10,
@@ -135,7 +137,7 @@ const style = StyleSheet.create({
   inputContainer: {backgroundColor: 'white', margin: 20, borderRadius: 10},
   addButton: {
     marginHorizontal: 120,
-    backgroundColor: '#7e8d94',
+    backgroundColor: '#ffccbc', 
     borderRadius: 10,
     marginBottom: 10,
   },
@@ -143,6 +145,6 @@ const style = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     paddingVertical: 10,
-    color: 'white',
+    color: '#373737',
   },
 });
