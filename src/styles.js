@@ -53,7 +53,7 @@ const todo_input = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontWeight: 'bold',
-        // textAlign: 'center'
+        textAlign: 'center'
     }
 })
 
