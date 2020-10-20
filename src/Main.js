@@ -12,10 +12,10 @@ import TodoInput from './components/TodoInput';
 
 const Main = () => {
   const [list, setList] = useState([]);
-  function addTodo() {
+  function addTodo(text) {
     const element = {
       id: list.length,
-      todo: Text,
+      todo: text,
       // todo, Böyle de yazılabilir.
       isDone: false,
     };
